@@ -1,0 +1,6 @@
+{
+  "name": "JehanTech Cinematic Commerce",
+  "description": "A premium, award-winning 3D futuristic ecommerce experience for JehanTech, featuring interactive 3D galleries, buttery smooth scrolling, and cinematic product showcases.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

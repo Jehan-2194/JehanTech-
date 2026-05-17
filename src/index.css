@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #030303;
+  --color-brand-dark: #0a0a0a;
+  --color-brand-gray: #111111;
+  --color-brand-light: #f5f5f7;
+  --color-brand-accent: #00d2ff;
+  --color-brand-accent-glow: rgba(0, 210, 255, 0.6);
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-light font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-brand-black overscroll-none;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 30px var(--color-brand-accent-glow);
+  }
+  .bg-glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  .bg-glass-dark {
+    @apply bg-black/60 backdrop-blur-2xl border border-white/5;
+  }
+  .magnetic-area {
+    @apply relative inline-block p-4 -m-4;
+  }
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    color: transparent;
+  }
+}
+
+/* Hide scrollbar for Lenis smooth scrolling to look cleaner */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
